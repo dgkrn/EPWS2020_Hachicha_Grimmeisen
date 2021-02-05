@@ -11,6 +11,8 @@ import java.util.jar.Manifest
 
 class MainActivity : AppCompatActivity() {
 
+    // Test
+
     //QR-Code Scanner
 
 
