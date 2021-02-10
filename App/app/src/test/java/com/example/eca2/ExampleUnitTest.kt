@@ -1,4 +1,4 @@
-package com.example.appep
+package com.example.eca2
 
 import org.junit.Test
 
