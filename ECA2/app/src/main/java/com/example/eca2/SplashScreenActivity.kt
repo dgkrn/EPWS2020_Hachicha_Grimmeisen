@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.view.WindowManager
 
 class SplashScreenActivity : AppCompatActivity() {
 
@@ -22,8 +23,14 @@ class SplashScreenActivity : AppCompatActivity() {
 
         }, 2000)  // delay
 
-
+        // Hide Actionbar
         supportActionBar?.hide()
+
+        // Make StatusBar transparent
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
+        )
 
 
     }

@@ -8,5 +8,11 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="red">#FB123A</color>
+    <color name="green">#4CAF50</color>
+    <color name="yellow">#FFEB3B</color>
+    <color name="redbright">#D8D53232</color>
+    <color name="orangelight">#43FFB7B7</color>
+    <color name="orangelight2">#7AF44336</color>
+
 
 </resources>

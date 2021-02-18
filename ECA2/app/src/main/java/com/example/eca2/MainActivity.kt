@@ -1,11 +1,12 @@
 package com.example.eca2
 
-import android.accounts.Account
-import android.accounts.AccountManager
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.view.WindowManager
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_contacts.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -69,5 +70,27 @@ class MainActivity : AppCompatActivity() {
 
 
 
+    }
+
+
+
+    fun onClear(view: View) {
+
+    }
+
+    fun onSave(view: View) {
+
+        // Create shared preferences file
+        val pref = getSharedPreferences("key", MODE_PRIVATE)
+        val editor = pref.edit()
+
+        // save name
+        editor.putString("CONTACT_NAME", etContactName.text.toString())
+        // save ID
+        editor.putInt("CONTACT_ID", btnLoad.text.toString().toInt())
+        // commit changes
+        editor.commit()
+
+        Toast.makeText(applicationContext,"Saved", Toast.LENGTH_SHORT).show()
     }
 }
