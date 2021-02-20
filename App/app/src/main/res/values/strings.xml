@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">ECA2</string>
+    <string-array name="professions">
+        <item>Pflegepersonal</item>
+        <item>Personal auf Intensivstationen</item>
+        <item>Rettungsdienst</item>
+        <item>Polizei/Feuerwehr</item>
+        <item>Büro-Job</item>
+        <item>Überwiegend im Home-Office</item>
+        <item>Student/Schüler</item>
+        <item>Arzt/Gesundheit</item>
+        <item>Dienstleistung</item>
+        <item>Kunst/Kultur</item>
+        <item>Landwirtschaft</item>
+        <item>Produktion/Fertigung</item>
+        <item>Verwaltung</item>
+    </string-array>
+</resources>

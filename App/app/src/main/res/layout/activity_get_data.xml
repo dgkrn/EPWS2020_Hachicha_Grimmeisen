@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/redfadefull"
+    tools:context=".GetDataActivity">
+
+    <EditText
+        android:id="@+id/etUserAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="How old are you?"
+        android:inputType="number"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etUserRoomMates" />
+
+    <EditText
+        android:id="@+id/etUserName1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="User Name"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="3dp" />
+
+    <CheckBox
+        android:id="@+id/cbWork"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Do you work?"
+        android:textColorHint="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/etUserWorkCount"
+        app:layout_constraintEnd_toStartOf="@+id/cbLiveAlone"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etUserName1" />
+
+
+    <CheckBox
+        android:id="@+id/cbLiveAlone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Do you live alone?"
+        android:textColorHint="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/etUserWorkCount"
+        app:layout_constraintEnd_toStartOf="@+id/cbKids"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cbWork"
+        app:layout_constraintTop_toBottomOf="@+id/etUserName1" />
+
+    <CheckBox
+        android:id="@+id/cbKids"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Do you have kids?"
+        android:textColorHint="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/etUserWorkCount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cbLiveAlone"
+        app:layout_constraintTop_toBottomOf="@+id/etUserName1" />
+
+    <EditText
+        android:id="@+id/etUserWorkCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:ems="10"
+        android:hint="How many people do you work with?"
+        android:inputType="number"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+    <Spinner
+        android:id="@+id/spinProfession"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="@color/orangelight"
+        android:backgroundTint="@color/white"
+        android:entries="@array/professions"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etUserWorkCount" />
+
+    <EditText
+        android:id="@+id/etUserRoomMates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="How many people do you live with?"
+        android:inputType="number"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinProfession" />
+
+    <Button
+        android:id="@+id/btnLoadData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Load"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnSaveData" />
+
+    <TextView
+        android:id="@+id/tvUserLocation"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="48dp"
+        android:text="Location"
+        app:layout_constraintTop_toBottomOf="@+id/etUserAge"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/tvSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Spinner"
+        app:layout_constraintTop_toBottomOf="@+id/etUserAge" />
+
+    <TextView
+        android:id="@+id/tvUserLocation2"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="Location"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserLocation" />
+
+    <TextView
+        android:id="@+id/tvUserCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="164dp"
+        android:text="City"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserLocation" />
+
+    <Button
+        android:id="@+id/btnSaveData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Location"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
